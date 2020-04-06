@@ -36,6 +36,7 @@ a {
 	color: var(--dark-color-a);
 	border: 0;
 	font-size: 17px;
+	border-radius: 2px;
 }
 
 /* Chat Page */
@@ -49,6 +50,7 @@ a {
 
 .chat-header {
 	background: var(--dark-color-a);
+	border-bottom: 2px solid;
 	color: #fff;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -56,6 +58,11 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+}
+.back {
+	padding: 8px;
+	background: var(--dark-color-b);
+	border-bottom: 1px solid var(--dark-color-a);
 }
 
 .chat-main {
@@ -139,6 +146,7 @@ a {
 	background: var(--dark-color-a);
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
+	border-bottom: 2px solid;
 }
 
 .join-main {
@@ -186,4 +194,66 @@ a {
 	.chat-sidebar {
 		display: none;
 	}
+}
+
+.anonymous {
+	display: flex;
+	align-items: center;
+	margin-top: 5px;
+	font-size: 14px;
+}
+.anonymous > input {
+	margin-right: 10px;
+}
+.label {
+	display: flex;
+	justify-content: space-between;
+}
+.help {
+	margin-right: 6px;
+    height: 18px;
+    width: 18px;
+    border: 1px solid;
+    padding: 0px 2px 0px 6px;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+.option {
+	text-align: center;
+	margin-top: 20px;
+}
+.heading {
+	margin-top:5px;
+	text-align: center;
+}
+
+.groups {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: center;
+}
+.group {
+	display: grid;
+	position: relative;
+	
+}
+.group > .icon {
+	height: 75px;
+	width: 75px;
+	background-color: #eee;
+	border-radius: 50%;
+	justify-self: center;
+}
+.checkbox-icon:checked + .group > .icon {
+	background-color: var(--success-color);
+}
+.checkbox-icon {
+	position: absolute;
+	z-index:1;
+	width: 75px;
+	height: 75px;
+	justify-self: center;
+	opacity: 0;
+
 }
